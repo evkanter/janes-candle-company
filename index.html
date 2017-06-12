@@ -1,0 +1,42 @@
+<html>
+<head>
+    <title>Jane Candle Co</title>
+    <link rel="stylesheet" href="css/styles.css">        
+</head>
+<body>
+    <header>
+        <img class="logo" src="./images/jane-candle-co-logo.jpg" alt="Jane Candle Company" />
+    </header>
+    <div class="tax-rate-container">
+        <p>Enter an amount and the city you purchased your item in.</p>
+        <p>This app will calculate the sales tax.</p>
+        <form>
+
+            <div>
+                <label for="amount">Amount</label>
+                $<input type="number" min="0" id="amount" step="0.01" value="0">
+            </div>
+
+            <div>
+                <label for="taxRate">Choose your city</label>
+                <select id="taxRate" name="taxRate">
+                    <option value="6.875">Hoboken</option>
+                    <option value="8.875">New York City</option>
+                </select>
+            </div>
+
+            <div><button type="button" onClick="updateValue();" class="grey-button">Calculate</button></div>
+
+            <div class="final-values">
+                Value: $<span id="entered-value">0</span><br/>
+                Sales Tax (<span id="sales-tax-percent">0</span>%): $<span id="sales-tax-paid">0</span><br/>
+                Total Value: $<span id="total-value">0</span>
+            </div>
+        </form>
+    </div>
+    <footer>
+        Jane Candle Co | 1000 Broadway | New York, NY | T: 555-111-3333 | E: info@janecandleco.com
+    </footer>
+    <script src="js/tax-calculator.js"></script>
+</body>
+</html>
